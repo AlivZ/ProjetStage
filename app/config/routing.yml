@@ -1,0 +1,8 @@
+eag_survey:
+    resource: "@EAGSurveyBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

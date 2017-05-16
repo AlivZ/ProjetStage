@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+Ajax Test
+    <div id="demo">
+        <h1>Charger les questionnaires !</h1>
+        <button id="mon_exemple" class="waves-effect waves-light btn" type="button">charger</button>
+    </div>
+
+    <script>
+            $("#mon_exemple").click(function(){
+                $("#demo").load("{{ path('eag_survey_list') }}");
+            });
+    </script>
+{% endblock %}

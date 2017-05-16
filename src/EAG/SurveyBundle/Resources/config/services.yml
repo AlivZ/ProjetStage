@@ -1,0 +1,4 @@
+services:
+#    eag_survey.example:
+#        class: EAG\SurveyBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

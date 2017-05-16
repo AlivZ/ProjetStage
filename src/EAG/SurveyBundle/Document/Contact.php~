@@ -1,0 +1,167 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: hugod
+ * Date: 11/04/2017
+ * Time: 14:50
+ */
+
+namespace EAG\SurveyBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+/**
+ * @MongoDB\Document
+ */
+class Contact
+{
+    /**
+     * @MongoDB\Id
+     */
+    protected $idContact;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $emailContact;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $nameContact;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $nicknameContact;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $civilityContact;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $societyContact;
+
+    /**
+     * Get idContact
+     *
+     * @return id $idContact
+     */
+    public function getIdContact()
+    {
+        return $this->idContact;
+    }
+
+    /**
+     * Set emailContact
+     *
+     * @param string $emailContact
+     * @return $this
+     */
+    public function setEmailContact($emailContact)
+    {
+        $this->emailContact = $emailContact;
+        return $this;
+    }
+
+    /**
+     * Get emailContact
+     *
+     * @return string $emailContact
+     */
+    public function getEmailContact()
+    {
+        return $this->emailContact;
+    }
+
+    /**
+     * Set nameContact
+     *
+     * @param string $nameContact
+     * @return $this
+     */
+    public function setNameContact($nameContact)
+    {
+        $this->nameContact = $nameContact;
+        return $this;
+    }
+
+    /**
+     * Get nameContact
+     *
+     * @return string $nameContact
+     */
+    public function getNameContact()
+    {
+        return $this->nameContact;
+    }
+
+    /**
+     * Set nicknameContact
+     *
+     * @param string $nicknameContact
+     * @return $this
+     */
+    public function setNicknameContact($nicknameContact)
+    {
+        $this->nicknameContact = $nicknameContact;
+        return $this;
+    }
+
+    /**
+     * Get nicknameContact
+     *
+     * @return string $nicknameContact
+     */
+    public function getNicknameContact()
+    {
+        return $this->nicknameContact;
+    }
+
+    /**
+     * Set civilityContact
+     *
+     * @param string $civilityContact
+     * @return $this
+     */
+    public function setCivilityContact($civilityContact)
+    {
+        $this->civilityContact = $civilityContact;
+        return $this;
+    }
+
+    /**
+     * Get civilityContact
+     *
+     * @return string $civilityContact
+     */
+    public function getCivilityContact()
+    {
+        return $this->civilityContact;
+    }
+
+    /**
+     * Set societyContact
+     *
+     * @param string $societyContact
+     * @return $this
+     */
+    public function setSocietyContact($societyContact)
+    {
+        $this->societyContact = $societyContact;
+        return $this;
+    }
+
+    /**
+     * Get societyContact
+     *
+     * @return string $societyContact
+     */
+    public function getSocietyContact()
+    {
+        return $this->societyContact;
+    }
+}

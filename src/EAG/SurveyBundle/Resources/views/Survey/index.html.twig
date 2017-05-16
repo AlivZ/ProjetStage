@@ -1,0 +1,35 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <div class="container">
+    <div class="card-panel green lighten-5">
+    <h3>Liste des questionnaires <a class="btn-floating btn-large waves-effect waves-light green" href="{{ path('eag_survey_create') }}"><i class="material-icons">face</i></a></h3>
+
+
+        <table class="highlight centered">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for survey in listSurveys %}
+                <tr>
+                    <td>{{ survey.id }}</td>
+                    <td>{{ survey.name }}</td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <ul style="list-style-type: none;">
+                            <li>
+                                <a class="waves-effect waves-light btn green"
+                                   href="{{ path('eag_survey_show', { 'id': survey.id }) }}">Afficher</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </div>
+{% endblock %}

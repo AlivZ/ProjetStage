@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Eval&Mongo{% endblock %}</title>
+            {% stylesheets
+            '@AppBundle/Resources/public/Material-Design-Icons/css/Material-Design-Icons.css'
+            '@AppBundle/Resources/public/Materialize/css/materialize.css'%}
+            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+
+            {% endstylesheets %}
+            {% javascripts
+            '@AppBundle/Resources/public/jQuery/js/jquery-3.2.1.js'
+            '@AppBundle/Resources/public/Materialize/js/materialize.js' %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

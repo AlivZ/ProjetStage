@@ -1,0 +1,32 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Questionnaire</h1>
+
+    <div class="table-responsive">
+        <table class="record_properties table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ survey.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ survey.name }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a class="btn btn-primary btn-lg" href="{{ path('eag_survey_delete', {'id': survey.id}) }}" rold="button">
+        Delete
+    </a>
+    <a class="btn btn-primary btn-lg" href="{{ path('eag_survey_list') }}" rold="button">
+        Back to the list
+    </a>
+
+    <div style="margin-top: 20px;">
+    <div>
+
+
+{% endblock %}
